@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1c16feed-686e-4afb-82c5-3811375c0c3a" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Class/SingletonPattern.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Class/This.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Class/Override.java" afterPath="$PROJECT_DIR$/src/Class/Override.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,8 +66,8 @@
       <file leaf-file-name="This.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Class/This.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="330">
+              <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -782,7 +780,7 @@
       <workItem from="1489023998884" duration="16000" />
       <workItem from="1489024067128" duration="11775000" />
       <workItem from="1489110870370" duration="3073000" />
-      <workItem from="1489202344536" duration="12430000" />
+      <workItem from="1489202344536" duration="12469000" />
     </task>
     <task id="LOCAL-00001" summary="数组工具类Arrays学习">
       <created>1489205495219</created>
@@ -805,11 +803,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489218850131</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="this">
+      <created>1489224355739</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1489224355739</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41882000" />
+    <option name="totallyTimeSpent" value="41921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
@@ -856,7 +861,8 @@
     <MESSAGE value="数组工具类Arrays学习" />
     <MESSAGE value="类的引用" />
     <MESSAGE value="重载,继承,构造函数" />
-    <option name="LAST_COMMIT_MESSAGE" value="重载,继承,构造函数" />
+    <MESSAGE value="this" />
+    <option name="LAST_COMMIT_MESSAGE" value="this" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1240,8 +1246,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Class/This.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        <state relative-caret-position="330">
+          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
           <folding />
         </state>
       </provider>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c16feed-686e-4afb-82c5-3811375c0c3a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Class/SingletonPattern.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Class/Enum.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="This.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="This.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Class/This.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            <state relative-caret-position="396">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,12 +76,22 @@
       <file leaf-file-name="SingletonPattern.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Class/SingletonPattern.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="814">
-              <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+            <state relative-caret-position="330">
+              <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
               <folding>
                 <element signature="e#484#485#0" expanded="true" />
                 <element signature="e#515#516#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Enum.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Class/Enum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/Class/This.java" />
         <option value="$PROJECT_DIR$/src/Class/Override.java" />
         <option value="$PROJECT_DIR$/src/Class/SingletonPattern.java" />
+        <option value="$PROJECT_DIR$/src/Class/Enum.java" />
       </list>
     </option>
   </component>
@@ -234,7 +245,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SingletonPattern.java" />
+              <option name="myItemId" value="Enum.java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -258,27 +269,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.idea/workspace.xml&#10;true" />
   </component>
-  <component name="RunManager" selected="Application.This">
-    <configuration default="false" name="Array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Array.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Array.Array" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="javaStudy" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Enum">
     <configuration default="false" name="ArraysTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -347,6 +338,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="Class.This" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="javaStudy" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Enum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Class.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Class.Enum" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -747,19 +758,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Array" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ArraysTest" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Override" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Constructor" />
-      <item index="4" class="java.lang.String" itemvalue="Application.This" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ArraysTest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Override" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Constructor" />
+      <item index="3" class="java.lang.String" itemvalue="Application.This" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Enum" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.This" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Constructor" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Override" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ArraysTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Array" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Enum" />
+        <item index="1" class="java.lang.String" itemvalue="Application.This" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Constructor" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Override" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ArraysTest" />
       </list>
     </recent_temporary>
   </component>
@@ -780,7 +791,7 @@
       <workItem from="1489023998884" duration="16000" />
       <workItem from="1489024067128" duration="11775000" />
       <workItem from="1489110870370" duration="3073000" />
-      <workItem from="1489202344536" duration="12469000" />
+      <workItem from="1489202344536" duration="13267000" />
     </task>
     <task id="LOCAL-00001" summary="数组工具类Arrays学习">
       <created>1489205495219</created>
@@ -810,11 +821,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489224355739</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="单例模式">
+      <created>1489224378788</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1489224378788</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41921000" />
+    <option name="totallyTimeSpent" value="42719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
@@ -862,7 +880,8 @@
     <MESSAGE value="类的引用" />
     <MESSAGE value="重载,继承,构造函数" />
     <MESSAGE value="this" />
-    <option name="LAST_COMMIT_MESSAGE" value="this" />
+    <MESSAGE value="单例模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="单例模式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -873,14 +892,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Array/Array.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/javaStudy/Array/Array.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="836">
@@ -1233,10 +1244,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/This.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Class/SingletonPattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+        <state relative-caret-position="330">
+          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
           <folding>
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#515#516#0" expanded="true" />
@@ -1244,10 +1263,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Class/This.java">
+    <entry file="file://$PROJECT_DIR$/src/Class/Enum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        <state relative-caret-position="506">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c16feed-686e-4afb-82c5-3811375c0c3a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Array/ArraysTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/Array/Array.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/FinalTest/FinalTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/LOL/Hero.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/LOL/Item.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/NameRule/NameRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/Operator/BitwiseOperator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/Operator/LogicalOperator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/Operator/calculateOperator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/Scope/Scope.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/javaStudy/TypeTransfer/casts.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Java-producer-customer/out/production/Java-producer-customer/com/demo/Consumer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Java-producer-customer/out/production/Java-producer-customer/com/demo/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Java-producer-customer/out/production/Java-producer-customer/com/demo/Producer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Java-producer-customer/out/production/Java-producer-customer/com/demo/Resource.class" afterPath="" />
+    <list default="true" id="1c16feed-686e-4afb-82c5-3811375c0c3a" name="Default" comment="类的引用">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Class/Quote.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,11 +20,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ArraysTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArraysTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Array/ArraysTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="88">
+              <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Quote.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Class/Quote.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,9 +103,10 @@
         <option value="$PROJECT_DIR$/src/FinalTest/FinalTest.java" />
         <option value="$PROJECT_DIR$/src/Operator/BitwiseOperator.java" />
         <option value="$PROJECT_DIR$/src/Array/Array.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Array/Arrays.java" />
         <option value="$PROJECT_DIR$/src/Array/ArraysTest.java" />
+        <option value="$PROJECT_DIR$/src/Class/Quote.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -175,7 +181,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Array" />
+              <option name="myItemId" value="Class" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -721,12 +727,20 @@
       <workItem from="1489023998884" duration="16000" />
       <workItem from="1489024067128" duration="11775000" />
       <workItem from="1489110870370" duration="3073000" />
-      <workItem from="1489202344536" duration="3130000" />
+      <workItem from="1489202344536" duration="5717000" />
     </task>
+    <task id="LOCAL-00001" summary="数组工具类Arrays学习">
+      <created>1489205495219</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1489205495219</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32582000" />
+    <option name="totallyTimeSpent" value="35169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
@@ -768,6 +782,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="数组工具类Arrays学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="数组工具类Arrays学习" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1060,14 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Array/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1086,8 +1096,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Array/ArraysTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="88">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Class/Quote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>

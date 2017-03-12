@@ -1,4 +1,5 @@
 package LOL;
+import LOL.Item;
 
 /**
  * Created by Jimers Lee on 2017/2/24.
@@ -87,6 +88,33 @@ public class Hero {
     void chat(String content){
         char koutouchan='干';
         System.out.println(this.name+"说:"+koutouchan+"!"+content);
+    }
+
+
+    public void useItem(Item i){
+        i.effect();
+    }
+
+    public void useLifePoint(LifePoint lifePoint){
+        System.out.println(this.name+"使用血瓶啦");
+    }
+    public void useMagicPoint(MagicPoint magicPoint){
+        System.out.println(this.name+"使用魔瓶啦");
+    }
+}
+
+
+
+
+class LifePoint extends Item {
+    public void effect(){
+        System.out.println("血瓶使用后，可以回血");
+    }
+}
+
+class MagicPoint extends Item {
+    public void effect(){
+        System.out.println("魔瓶使用后，可以回魔");
     }
 }
 

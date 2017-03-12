@@ -7,25 +7,8 @@ package InterfaceExtends;
  */
 public class OverrideTest {
     public static void main(String [] args){
-        Item i=new Item();
-        i.effect();
-        LifePoint lp=new LifePoint();
-        lp.effect();
+
     }
 
 }
 
- class Item{
-    public void buy(){
-
-    }
-    public void effect(){
-        System.out.println("物品使用后，可以有效果");
-    }
-
- }
-class LifePoint extends Item{
-    public void effect(){
-        System.out.println("血瓶使用后，可以回血");
-    }
-}

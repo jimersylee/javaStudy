@@ -21,6 +21,11 @@ public class Item {
         sword.name="长剑";
         sword.price=350;
     }
+
+
+    public void effect(){
+        System.out.println("物品被使用啦");
+    }
 }
 
 

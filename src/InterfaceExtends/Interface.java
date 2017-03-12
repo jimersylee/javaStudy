@@ -46,6 +46,10 @@ class ADAPHero extends Hero implements AD, AP {
     }
 }
 
+class SupportHero extends Hero{
+
+}
+
 
 /**
  * 物理英雄 接口类
@@ -66,3 +70,7 @@ interface AP {
      */
     void magicAttack();
 }
+
+
+
+

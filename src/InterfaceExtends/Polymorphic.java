@@ -10,9 +10,13 @@ import LOL.MagicPoint;
  * 多态
  * Created by Jimersy Lee on 2017/3/12.
  */
-public class polymorphic {
+public class Polymorphic {
     public static void main(String [] args){
-
+        Polymorphic p=new Polymorphic();
+        p.operator();
+        p.notUsePolymorphic();
+        p.classOperator();
+        p.usePolymorphic();
     }
 
 

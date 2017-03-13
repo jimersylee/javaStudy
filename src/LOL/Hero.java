@@ -55,6 +55,10 @@ public class Hero {
 
     }
 
+    public void finalize(){
+        System.out.println("这个英雄正在被回收...");
+    }
+
 
 
 

@@ -1,6 +1,10 @@
 package InterfaceExtends;
 
 import LOL.Hero;
+import LOL.Item;
+import LOL.LifePoint;
+import LOL.MagicPoint;
+
 
 /**
  * 多态
@@ -33,7 +37,6 @@ public class polymorphic {
      */
     public void classOperator(){
         Item lp=new LifePoint();
-
         Item mp=new MagicPoint();
         System.out.print("i1  是Item类型，执行effect打印:");
         lp.effect();
@@ -50,9 +53,21 @@ public class polymorphic {
         LifePoint lifePoint=new LifePoint();
         MagicPoint magicPoint=new MagicPoint();
         garen.useLifePoint(lifePoint);
+        garen.useMagicPoint(magicPoint);
+        //如果要使用其他物品,则要写很多use方法
 
+    }
 
-
+    /**
+     * 使用多态的实现方式
+     */
+    public void usePolymorphic(){
+        Hero garen=new Hero();
+        garen.setName("盖伦");
+        LifePoint lifePoint=new LifePoint();
+        MagicPoint magicPoint=new MagicPoint();
+        garen.useItem(lifePoint);
+        garen.useItem(magicPoint);
     }
 
 

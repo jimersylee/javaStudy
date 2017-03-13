@@ -106,17 +106,7 @@ public class Hero {
 
 
 
-class LifePoint extends Item {
-    public void effect(){
-        System.out.println("血瓶使用后，可以回血");
-    }
-}
 
-class MagicPoint extends Item {
-    public void effect(){
-        System.out.println("魔瓶使用后，可以回魔");
-    }
-}
 
 
 

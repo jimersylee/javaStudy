@@ -8,7 +8,7 @@ public class Hero {
     private String name;
     private float hp;
     private float armor;
-    private int moveSpeed;
+    public int moveSpeed=300;
 
 
     public void setName(String name) {
@@ -43,6 +43,20 @@ public class Hero {
     public int getMoveSpeed() {
         return moveSpeed;
     }
+
+
+
+    public Hero(String name){
+        System.out.println("Hero的有参构造函数");
+        this.name=name;
+    }
+
+    public Hero(){
+
+    }
+
+
+
 
     public static void main(String[] args){
         Hero garen=new Hero();
@@ -100,6 +114,12 @@ public class Hero {
     }
     public void useMagicPoint(MagicPoint magicPoint){
         System.out.println(this.name+"使用魔瓶啦");
+    }
+
+
+
+    public static void battleWin(){
+        System.out.println("hero battle Win");
     }
 }
 

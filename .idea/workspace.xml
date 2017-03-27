@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c16feed-686e-4afb-82c5-3811375c0c3a" name="Default" comment="异常Exception">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Primary/Class/AnonymousClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Primary/Class/InnerClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Primary/Class/localClass.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Java-producer-customer/src/com/demo/Consumer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Java-producer-customer/src/com/demo/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Java-producer-customer/src/com/demo/Producer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Java-producer-customer/src/com/demo/Resource.java" afterPath="" />
+    <list default="true" id="1c16feed-686e-4afb-82c5-3811375c0c3a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Primary/Class/AnonymousClass.java" afterPath="$PROJECT_DIR$/src/Primary/Class/AnonymousClass.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +47,12 @@
       <file leaf-file-name="AnonymousClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Primary/Class/AnonymousClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+            <state relative-caret-position="374">
+              <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#693#694#0" expanded="true" />
+                <element signature="e#516#697#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -797,7 +792,7 @@
       <workItem from="1489371964595" duration="9995000" />
       <workItem from="1489390185913" duration="6124000" />
       <workItem from="1490581349871" duration="72000" />
-      <workItem from="1490581456681" duration="4539000" />
+      <workItem from="1490581456681" duration="6072000" />
     </task>
     <task id="LOCAL-00001" summary="数组工具类Arrays学习">
       <created>1489205495219</created>
@@ -911,11 +906,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489398702342</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="公开内部类,静态内部类,匿名内部类,本地类,内部类使用外部局部变量,需要使用final修饰,jdk8中不用加,编译器自动加">
+      <created>1490586011174</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1490586011174</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71152000" />
+    <option name="totallyTimeSpent" value="72685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -973,7 +975,8 @@
     <MESSAGE value="Object" />
     <MESSAGE value="final修饰符" />
     <MESSAGE value="异常Exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="异常Exception" />
+    <MESSAGE value="公开内部类,静态内部类,匿名内部类,本地类,内部类使用外部局部变量,需要使用final修饰,jdk8中不用加,编译器自动加" />
+    <option name="LAST_COMMIT_MESSAGE" value="公开内部类,静态内部类,匿名内部类,本地类,内部类使用外部局部变量,需要使用final修饰,jdk8中不用加,编译器自动加" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1278,11 +1281,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Primary/Class/AnonymousClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        <state relative-caret-position="374">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#516#697#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
           </folding>
         </state>
       </provider>

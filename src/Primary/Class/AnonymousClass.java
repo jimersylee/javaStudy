@@ -19,7 +19,8 @@ public abstract class AnonymousClass {
         AnonymousClass ac=new AnonymousClass() {
                @Override
                public void attack() {
-                   System.out.printf("新的攻击手段,造成%d点伤害",damage);
+                   System.out.printf("新的攻击手段,造成%d点伤害\n",damage);
+
                }
            };
 

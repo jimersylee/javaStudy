@@ -4,10 +4,11 @@ package Primary.LOL;
  * Created by Jimers Lee on 2017/2/24.
  */
 public class Hero {
-    private String name;
-    private float hp;
+    public String name;
+    public float hp;
     private float armor;
     public int moveSpeed=300;
+    public int damage;
 
 
     public void setName(String name) {
@@ -123,6 +124,25 @@ public class Hero {
 
     public static void battleWin(){
         System.out.println("hero battle Win");
+    }
+
+    public void attatckHero(Hero h){
+        try{
+            Thread.sleep(1000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        h.hp-=damage;
+        System.out.printf("%s正在攻击%s,%s的血量变成了 %.0f%n",name,h.name,h.name,h.hp);
+        if(h.isDead()){
+            System.out.println(h.name+"死了!");
+        }
+
+    }
+
+    public boolean isDead(){
+        return 0 >= hp?true:false;
     }
 }
 

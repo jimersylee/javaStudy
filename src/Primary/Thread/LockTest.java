@@ -2,58 +2,78 @@ package Primary.Thread;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  *
  * Created by Jimersy Lee on 2017/4/14.
  */
 public class LockTest {
-    public static String now(){
+    public static String now() {
         return new SimpleDateFormat("HH:mm:ss").format(new Date());
     }
 
+    public static void log(String msg) {
+        System.out.printf("%s %s %s %n", now() , Thread.currentThread().getName() , msg);
+    }
+
     public static void main(String[] args) {
-        final Object someObject = new Object();
+        Lock lock = new ReentrantLock();
 
-        Thread t1 = new Thread(){
-            public void run(){
+        Thread t1 = new Thread() {
+            public void run() {
                 try {
-                    System.out.println( now()+" t1 线程已经运行");
-                    System.out.println( now()+this.getName()+ " 试图占有对象：someObject");
-                    synchronized (someObject) {
+                    log("线程启动...");
+                    log("试图占有对象：lock");
 
-                        System.out.println( now()+this.getName()+ " 占有对象：someObject");
-                        Thread.sleep(5000);
-                        System.out.println( now()+this.getName()+ " 释放对象：someObject");
-                    }
-                    System.out.println(now()+" t1 线程结束");
+                    lock.lock();
+
+                    log("占有对象：lock");
+                    log("进行5秒的业务操作");
+                    Thread.sleep(5000);
+
                 } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
+                } finally {
+                    log("释放对象：lock");
+                    lock.unlock();
                 }
+                log("线程结束");
             }
         };
-        t1.setName(" t1");
+        t1.setName("t1");
         t1.start();
-        Thread t2 = new Thread(){
+        try {
+            //先让t1飞2秒
+            Thread.sleep(2000);
+        } catch (InterruptedException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+        Thread t2 = new Thread() {
 
-            public void run(){
+            public void run() {
                 try {
-                    System.out.println( now()+" t2 线程已经运行");
-                    System.out.println( now()+this.getName()+ " 试图占有对象：someObject");
-                    synchronized (someObject) {
-                        System.out.println( now()+this.getName()+ " 占有对象：someObject");
-                        Thread.sleep(5000);
-                        System.out.println( now()+this.getName()+ " 释放对象：someObject");
-                    }
-                    System.out.println(now()+" t2 线程结束");
+                    log("线程启动");
+                    log("试图占有对象：lock");
+
+                    lock.lock();
+
+                    log("占有对象：lock");
+                    log("进行5秒的业务操作");
+                    Thread.sleep(5000);
+
                 } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
+                } finally {
+                    log("释放对象：lock");
+                    lock.unlock();
                 }
+                log("线程结束");
             }
         };
-        t2.setName(" t2");
+        t2.setName("t2");
         t2.start();
     }
 }

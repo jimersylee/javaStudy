@@ -1,0 +1,10 @@
+workspace:
+    base: /root/go
+    path: src/projectname
+
+
+pipeline:
+
+    commands:
+        - cp .drone.yml .drone.yml.bak
+        - echo "SUCCESS"

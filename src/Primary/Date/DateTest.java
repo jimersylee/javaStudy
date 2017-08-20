@@ -52,10 +52,8 @@ public class DateTest {
 
 
         Date d1 = new Date();
-        String str1 = sdf1.format(d1);
-        String str1 = sdf1.format(d1);String str1 = sdf1.format(d1);
-        String str1 = sdf1.format(d1);
-        str1=
+        String str1 = sdf.format(d1);
+
 
 
 

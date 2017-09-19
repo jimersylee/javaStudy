@@ -179,7 +179,40 @@ Exception in thread "main" java.lang.StackOverflowError
 如果测试时不限于单线程,通过不断地建立线程的方式到时可以产生内存溢出异常,如代码清单2-5所示.但是这样的内存溢出异常与栈空间足够大并不存在任何关联,或者准确地说,在这种情况下,为每个线程的栈分配的内存越大,反而越容易产生内存溢出异常.
 
 代码清单2-5 创建线程导致内存溢出异常
+```
+/**
+ * 创建线程导致内存溢出异常
+ * VM Args: -Xss2M
+ * @author Jimersy Lee
+ * todo:没有等到抛出异常
+ */
+public class JavaVMStackOOM {
+    private void dontStop(){
+        while (true){
 
+        }
+    }
+
+    public void stackLeakByThread(){
+        int count=0;
+        while(true){
+            Thread thread=new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    dontStop();
+                }
+            });
+            thread.start();
+            System.out.println(count++);
+        }
+    }
+    public static void main(String[] args){
+        JavaVMStackOOM oom=new JavaVMStackOOM();
+        oom.stackLeakByThread();
+    }
+}
+```
+##2.4.3 方法区和运行时常量池溢出
 
 
 

@@ -89,6 +89,97 @@ HotSpot采用直接指针方式
     - 优点:速度更快,少了一次通过句柄定位指针的开销
     
 ##2.4 实战:OutOfMemoryError异常
+1. 通过代码验证Java虚拟机规范中描述的各个运行时区域存储的内容
+2. 根据异常的信息快速判断是哪个区域的内存一处,知道什么的样的代码可能导致这些区域内存溢出,以及出现这些异常后如何处理
+
+
+##2.4.1 Java堆溢出
+
+复现过程,设置jvm启动参数来实现,本文使用Idea,在Run/Debug configuration中的VM options选项中填入如下参数
+```
+-Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
+```
+以上代码限制Java堆的大小为20MB,不可扩展(将堆的最小值 -Xms参数与最大值-Xmx参数设置为一样即可避免堆自动扩展),通过-XX:+HeapDumpOnOutOfMemoryError可以让虚拟机在出现内存溢出异常时Dump出当前的内存对转储快照以便时候进行分析
+
+代码清单
+```
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * VM Args: -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
+ * @author jimersylee 
+ */
+public class HeapOOM {
+    private static class OOMObject{
+
+    }
+    public static void main(String[] args){
+        List<OOMObject> list=new ArrayList<>();
+        while(true){
+            list.add(new OOMObject());
+        }
+    }
+}
+```
+运行结果
+```
+java.lang.OutOfMemoryError: Java heap space
+Dumping heap to java_pid27497.hprof ...
+Exception in thread "main" Heap dump file created [27789642 bytes in 0.164 secs]
+java.lang.OutOfMemoryError: Java heap space
+```
+
+
+##2.4.2 虚拟机栈和本地方法栈溢出
+对于HotSpot来说,虽然-Xoss参数(设置本地方法栈大小)存在,但实际上是无效的,栈容量实际由-Xss参数设定.关于虚拟机栈和本地方法栈,在Java虚拟机中描述了两种异常:
+- 如果线程请求的栈深度大于虚拟机所允许的最大深度,将抛出StackOverflowError异常.
+- 如果虚拟机在扩展栈时无法申请到足够的内存空间,则抛出OutOfMemoryError异常.
+
+将实验范围限制于单线程操作,下面两种方法均无法让虚拟机产生OutOfMemoryError异常,尝试的结果都是StackOverflowError异常,测试代码2-4
+- 使用-Xss参数减少栈内存容量.结果抛出StackOverflowError异常,异常出现时输出的堆栈深度相应缩小
+- 定义了大量的本地变量,增大此方法帧中本地变量表的长度.结果:抛出StackOverflowError异常时堆栈深度相应缩小
+
+代码清单2-4 
+```
+/**
+ * 虚拟机和本地方法栈OOM测试(仅作为第一点测试程序)
+ * VM Args:-Xss228k
+ * @author Jimersy Lee
+ */
+public class JavaVMStackSOF {
+    private int stackLength=1;
+    public void stackLeak(){
+        stackLength++;
+        stackLeak();
+    }
+    public static void main(String[] args) throws Throwable{
+        JavaVMStackSOF oom=new JavaVMStackSOF();
+        try {
+            oom.stackLeak();
+        }catch (Throwable e){
+            System.out.println("stack length:"+oom.stackLength);
+            throw e;
+        }
+    }
+}
+```
+运行结果
+```
+Exception in thread "main" java.lang.StackOverflowError
+   stack length:1517
+   	at JVM.chapter2.JavaVMStackSOF.stackLeak(JavaVMStackSOF.java:11)
+   	at JVM.chapter2.JavaVMStackSOF.stackLeak(JavaVMStackSOF.java:12)
+   	at JVM.chapter2.JavaVMStackSOF.stackLeak(JavaVMStackSOF.java:12)
+   	at JVM.chapter2.JavaVMStackSOF.stackLeak(JavaVMStackSOF.java:12)
+.....后续异常堆栈信息省略
+```
+实验结果表明:在单个线程下,无论是由于栈帧太大或是虚拟机栈容量太小,当内存无法分配的时候,虚拟机抛出都是StackOverflowError异常
+
+如果测试时不限于单线程,通过不断地建立线程的方式到时可以产生内存溢出异常,如代码清单2-5所示.但是这样的内存溢出异常与栈空间足够大并不存在任何关联,或者准确地说,在这种情况下,为每个线程的栈分配的内存越大,反而越容易产生内存溢出异常.
+
+代码清单2-5 创建线程导致内存溢出异常
+
 
 
 

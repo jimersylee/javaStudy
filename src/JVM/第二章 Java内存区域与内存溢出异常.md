@@ -213,8 +213,61 @@ public class JavaVMStackOOM {
 }
 ```
 ##2.4.3 方法区和运行时常量池溢出
+运行时常量池是方法区的一部分,因此这两个区域的溢出测试放在一起进行.
+
+jdk1.6之前的版本,常量池分配在永久代中,可以通过-XX:PermSize和-XX:MaxPermSize限制方法区大小,从而间接限制其中常量池的容量
+
+代码清单2-6 运行时常量池导致的内存溢出异常
+
+```
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 运行时常量池导致的内存溢出异常,适用版本jdk1.6,1.8已经去除永久代
+ * @author jimersylee
+ * VM Args: -XX:PermSize=10m -XX:MaxPermSize=10m
+ * String.intern()是一个Native方法,它的作用是:如果字符串常量池中已经包含一个等于此String对象的字符串,则返回代表池中这个字符串的String对象;否则,将此String对象包含的字符串添加到常量池中,并且返回此String对象的引用
+ */
+public class RuntimeConstantPoolOOM {
+    public static void main(String[] args){
+        //使用List保持着常量池引用,避免Full GC回收常量池行为
+        List<String> list=new ArrayList<>();
+        //10MB的PermSize在Integer范围内足够产生OOM了
+        int i=0;
+        while (true){
+            list.add(String.valueOf(i++).intern());
+            System.out.println(list.size());
+        }
+
+    }
+}
+```
+
+关于字符串常量池的实现问题,引出一个有意思的影响
+```
+/**
+ * String.intern()返回引用测试
+ */
+public class StringIntern {
+    public static void main(String[] args) {
+        String str1 = new StringBuilder("计算机").append("软件").toString();
+        System.out.println(str1.intern()==str1);
 
 
+        String str2=new StringBuilder("ja").append("va").toString();
+        System.out.println(str2.intern()==str2);
+    }
+}
+```
+
+jdk1.6中,得到两个false;jdk1.7以后,得到true,和false;
+
+jdk1.6中,intern()方法会把首次遇到的字符串实例复制到永久代中,返回的也是永久代中的这个字符串实例的引用,而StringBuilder创建的字符串实例在Java堆上,必然不是同一个引用,将返回false;
+
+jdk1.7中,intern()实现不会在复制实例,只是在常量池中记录首次出现的实例引用,因此intern()返回的引用和由StringBuilder创建的那个字符创实例是同一个.
+
+方法区用于存放Class的相关信息,如类名,访问修饰符,常量池,字段描述,方法描述
 
 
 

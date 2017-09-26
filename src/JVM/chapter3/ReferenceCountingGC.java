@@ -1,5 +1,7 @@
 package JVM.chapter3;
 
+import java.lang.ref.SoftReference;
+
 /**
  * testGC()方法执行后,objA和ObjB会不会被GC呢
  */
@@ -20,6 +22,9 @@ public class ReferenceCountingGC {
         objB=null;
         //假设在这行发生GC,objA和objB能否被回收
         System.gc();
+        SoftReference<String> softReference=new SoftReference<>("2222");
+        String sss=softReference.get();
+        String www= "2222";
 
         /*
         [GC (System.gc()) [PSYoungGen: 6747K->416K(51200K)] 6747K->416K(168960K), 0.0016519 secs] [Times: user=0.00 sys=0.00, real=0.00 secs]

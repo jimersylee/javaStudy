@@ -25,7 +25,15 @@ package Algorithm;
  * Created by Jimersy Lee on 2017/6/14.
  */
 public class MergeTwoBinaryTrees {
-        public TreeNode mergeTrees(TreeNode t1,TreeNode t2){
+    public static void main(String[] args){
+        MergeTwoBinaryTrees m=new MergeTwoBinaryTrees();
+
+    }
+
+
+
+
+    public TreeNode mergeTrees(TreeNode t1,TreeNode t2){
             //节点不定长,采用递归的方式
             if(t1==null && t2==null){
                 return null;

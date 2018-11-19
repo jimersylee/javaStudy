@@ -1,6 +1,5 @@
 package Primary.Class;
 
-import java.lang.*;
 import java.lang.Override;
 
 /**

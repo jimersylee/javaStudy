@@ -3,7 +3,6 @@ package Primary.Generic;
 import Primary.LOL.ADHero;
 import Primary.LOL.APHero;
 import Primary.LOL.Hero;
-import Primary.LOL.LifePoint;
 
 import java.util.ArrayList;
 
